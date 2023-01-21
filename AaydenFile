@@ -1,0 +1,123 @@
+import os
+import time
+from colorama import Fore
+
+password = "Password123"
+
+print(Fore.GREEN + "How old are you?")
+age = input("Your Age: ")
+
+if age >= "13":
+  print("You are eligable to use this program.")
+  time.sleep(2)
+  os.system('clear')
+
+if age <= "12":
+  print("You are not eligable to use this program.")
+  time.sleep(2)
+  os.system('clear')
+  exit()
+
+#Sign in
+print("SIGN IN...")
+what_is_your_password = input("Your Password: ")
+time.sleep(1.5)
+
+#Checks if password is correct
+if password == what_is_your_password:
+  print("-CORRECT-")
+  time.sleep(1.5)
+  os.system('clear')
+  print("Which file would you like to open?")
+  time.sleep(0.5)
+  print("File chioces:")
+  print("File A")
+  print("File B")
+  print("File C")
+  file_choice = input("File Name:  ")
+
+  for i in range(1, 3):
+    os.system('clear')
+    print("Please wait.")
+    time.sleep(1.5)
+    os.system('clear')
+    print("Please wait..")
+    time.sleep(1.5)
+    os.system('clear')
+    print("Please wait...")
+    time.sleep(1.5)
+    os.system('clear')
+    time.sleep(1.5)
+  time.sleep(1.5)
+  os.system('clear')
+
+  if file_choice == "File A":
+    x = open("./File_A.txt", "a")
+  if file_choice == "File B":
+    y = open("File_B.txt", "a")
+  if file_choice == "File C":
+    z = open("File_C.txt", "a")
+
+#If password is wrong, gives more chances
+elif password == password:
+  if password == password:
+    print(Fore.RED + "-INCORRECT-")
+    time.sleep(1.5)
+    print("Try again please.")
+    time.sleep(1.5)
+    os.system('clear')
+    print("SIGN IN...")
+    what_is_your_password = input(Fore.GREEN + "Your Password: ")
+    time.sleep(1.5)
+
+  #Opens file
+  if password == what_is_your_password:
+    print("-CORRECT-")
+    time.sleep(1.5)
+    os.system('clear')
+    print("Which file would you like to open?")
+    time.sleep(0.5)
+    print("File chioces:")
+    print("File A")
+    print("File B")
+    print("File C")
+    print("Which file would you like to open?")
+    file_choice = input("File: ")
+  for i in range(1, 3):
+    os.system('clear')
+    print("Please wait.")
+    time.sleep(1.5)
+    os.system('clear')
+    print("Please wait..")
+    time.sleep(1.5)
+    os.system('clear')
+    print("Please wait...")
+    time.sleep(1.5)
+    os.system('clear')
+    time.sleep(1.5)
+  os.system('clear')
+
+  if file_choice == "File A":
+    x = open("File_A.txt", "a")
+  if file_choice == "File B":
+    y = open("File_B.txt", "a")
+  if file_choice == "File C":
+    z = open("File_C.txt", "a")
+
+#End code
+print("Your file has been opened.")
+time.sleep(1.5)
+
+#Close file code
+print("Would you like to close all files?")
+print("Yes / No")
+
+close_file = input("Your Answer: ")
+
+if close_file == "Yes":
+  x.close()
+  y.close()
+  z.close()
+
+#NOTES-
+# - Delete file w code
